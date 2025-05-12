@@ -1,0 +1,30 @@
+name: PizzaaDemoTest
+version: 2
+projectReferences: 
+  - /PizzaAppTest
+resources: 
+  - name: .classpath
+    type: com.ibm.rational.test.lt.classpath
+    dependencies: 
+      - path: /PizzaaDemoTest/src
+        type: javaClasspath
+  - name: UITest.recdata
+  - name: UITest.recsession
+    type: com.ibm.rational.test.lt.recsession
+    dependencies: 
+      - path: /PizzaaDemoTest/UITest.recdata
+        type: recsessionRecdata
+  - name: UITest.testsuite
+    type: com.ibm.rational.test.lt.test
+    version: 11.0.4.0
+    properties: 
+      features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.mobileweb'
+      type: com.ibm.rational.test.lt.lttest
+      uid: A1F02F1EEE618C20D111B66664356536
+    dependencies: 
+      - path: /PizzaAppTest/_165_192_86_196.ma
+        type: test#moeb.applicationPackage
+      - path: /PizzaaDemoTest/UITest.recsession
+        type: testRecsession
+  - name: src
+    resources: 
