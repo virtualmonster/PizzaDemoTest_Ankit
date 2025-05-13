@@ -1,0 +1,51 @@
+note: Generated from recorded traffic
+steps:
+  - open:
+      note: Open pizza
+      meta:
+        browserName: edge
+        browserVersion: 136.0.3240.64
+        platformName: windows
+      url: '${APP_PIZZA_URL}'
+  - with:
+      note: Pizza Delight - Your Favorite Pizza Delivered Fast
+      steps:
+        - click:
+            shot: shot/7xqcdy.dti.jpeg#63
+            object: html.button
+            identifiers:
+              - properties:
+                  - content:
+                      - val: Add to Cart
+                locators:
+                  - position: '1'
+        - select:
+            shot: shot/c45vml.dti.jpeg#118
+            object: html.select
+            identifiers:
+              - properties:
+                  - label:
+                      - val: 'Quantity:'
+                locators:
+                  - position: '2'
+            value: '2'
+        - click:
+            shot: shot/fuqcwp.dti.jpeg#171
+            object: html.button
+            identifiers:
+              - properties:
+                  - content:
+                      - val: Add to Cart
+                locators:
+                  - position: '2'
+        - click:
+            shot: shot/35qubp.dti.jpeg#250
+            object: html.button
+            identifiers:
+              - properties:
+                  - content:
+                      - val: Buy Now
+vars:
+  APP_PIZZA_URL:
+    expr: http://165.192.86.196:3001/
+    modifier: in
