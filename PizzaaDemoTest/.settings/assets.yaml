@@ -7,6 +7,54 @@ resources:
     dependencies: 
       - path: /PizzaaDemoTest/src
         type: javaClasspath
+  - name: 'Order a Pizza.recdata'
+  - name: 'Order a Pizza.recsession'
+    type: com.ibm.rational.test.lt.recsession
+    dependencies: 
+      - path: '/PizzaaDemoTest/Order a Pizza.recdata'
+        type: recsessionRecdata
+  - name: 'Order a Pizza.testsuite'
+    type: com.ibm.rational.test.lt.test
+    version: 11.0.4.0
+    properties: 
+      features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.mobileweb'
+      type: com.ibm.rational.test.lt.lttest
+      uid: A1F03006C2235D80DE46B73135376635
+    dependencies: 
+      - path: '/PizzaaDemoTest/Order a Pizza.recsession'
+        type: testRecsession
+      - path: /PizzaaDemoTest/b_Pizza_App_1a3.ma
+        type: test#moeb.applicationPackage
+  - name: 'Order a Pizza_1747146624616.stats'
+    type: com.ibm.rational.test.lt.stats.session
+    properties: 
+      startTime: 1747146624616
+      tags: 
+      testId: A1F03006C2235D80DE46B73135376635
+      testName: 'Order a Pizza'
+    dependencies: 
+      - path: '/PizzaaDemoTest/Order a Pizza.testsuite'
+        type: statsSessionTest
+      - path: '/PizzaaDemoTest/Order a Pizza_1747146624616.xmoebreport'
+        type: statsSessionAsset
+      - path: '/PizzaaDemoTest/Order a Pizza_1747146624616_orch!system.mstats'
+        type: statsSessionStore
+      - path: '/PizzaaDemoTest/Order a Pizza_1747146624616_orch!system.rstats'
+        type: statsSessionStore
+      - path: '/PizzaaDemoTest/Order a Pizza_1747146624616_perf!localhost.mstats'
+        type: statsSessionStore
+      - path: '/PizzaaDemoTest/Order a Pizza_1747146624616_perf!localhost.rstats'
+        type: statsSessionStore
+      - path: '/PizzaaDemoTest/Order a Pizza_1747146629751.executiondlr'
+        type: statsSessionAsset
+  - name: 'Order a Pizza_1747146624616.xmoebreport'
+  - name: 'Order a Pizza_1747146624616_orch!system.mstats'
+  - name: 'Order a Pizza_1747146624616_orch!system.rstats'
+    type: com.ibm.rational.test.lt.stats.raw
+  - name: 'Order a Pizza_1747146624616_perf!localhost.mstats'
+  - name: 'Order a Pizza_1747146624616_perf!localhost.rstats'
+    type: com.ibm.rational.test.lt.stats.raw
+  - name: 'Order a Pizza_1747146629751.executiondlr'
   - name: UITest.recdata
   - name: UITest.recsession
     type: com.ibm.rational.test.lt.recsession
@@ -157,6 +205,8 @@ resources:
           - name: Google_Test_A1F030041D5D6DB0DE46B73135376635.java
             type: com.ibm.rational.test.lt.generatedCode
           - name: Httptest_Test_A1F03003236BFC40DE46B73135376635.java
+            type: com.ibm.rational.test.lt.generatedCode
+          - name: Order_a_Pizza_Test_A1F03006C2235D80DE46B73135376635.java
             type: com.ibm.rational.test.lt.generatedCode
           - name: UITest_Test_A1F02F1EEE618C20D111B66664356536.java
             type: com.ibm.rational.test.lt.generatedCode
