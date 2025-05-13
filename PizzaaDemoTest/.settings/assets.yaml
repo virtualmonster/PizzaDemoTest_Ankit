@@ -55,8 +55,58 @@ resources:
   - name: UITest_1747143173656_perf!localhost.rstats
     type: com.ibm.rational.test.lt.stats.raw
   - name: UITest_1747143174418.executiondlr
+  - name: _google_com_1e2.ma
+    type: moeb.applicationPackage
   - name: b_Pizza_App_1a3.ma
     type: moeb.applicationPackage
+  - name: google.recdata
+  - name: google.recsession
+    type: com.ibm.rational.test.lt.recsession
+    dependencies: 
+      - path: /PizzaaDemoTest/google.recdata
+        type: recsessionRecdata
+  - name: google.testsuite
+    type: com.ibm.rational.test.lt.test
+    version: 11.0.4.0
+    properties: 
+      features: 'com.ibm.rational.test.lt.feature.lt,com.ibm.rational.test.lt.feature.mobileweb'
+      type: com.ibm.rational.test.lt.lttest
+      uid: A1F030041D5D6DB0DE46B73135376635
+    dependencies: 
+      - path: /PizzaaDemoTest/_google_com_1e2.ma
+        type: test#moeb.applicationPackage
+      - path: /PizzaaDemoTest/google.recsession
+        type: testRecsession
+  - name: google_1747145492990.stats
+    type: com.ibm.rational.test.lt.stats.session
+    properties: 
+      startTime: 1747145492990
+      tags: 
+      testId: A1F030041D5D6DB0DE46B73135376635
+      testName: google
+    dependencies: 
+      - path: /PizzaaDemoTest/google.testsuite
+        type: statsSessionTest
+      - path: /PizzaaDemoTest/google_1747145492990.xmoebreport
+        type: statsSessionAsset
+      - path: /PizzaaDemoTest/google_1747145492990_orch!system.mstats
+        type: statsSessionStore
+      - path: /PizzaaDemoTest/google_1747145492990_orch!system.rstats
+        type: statsSessionStore
+      - path: /PizzaaDemoTest/google_1747145492990_perf!localhost.mstats
+        type: statsSessionStore
+      - path: /PizzaaDemoTest/google_1747145492990_perf!localhost.rstats
+        type: statsSessionStore
+      - path: /PizzaaDemoTest/google_1747145493131.executiondlr
+        type: statsSessionAsset
+  - name: google_1747145492990.xmoebreport
+  - name: google_1747145492990_orch!system.mstats
+  - name: google_1747145492990_orch!system.rstats
+    type: com.ibm.rational.test.lt.stats.raw
+  - name: google_1747145492990_perf!localhost.mstats
+  - name: google_1747145492990_perf!localhost.rstats
+    type: com.ibm.rational.test.lt.stats.raw
+  - name: google_1747145493131.executiondlr
   - name: httptest.recdata
   - name: httptest.recsession
     type: com.ibm.rational.test.lt.recsession
@@ -104,6 +154,8 @@ resources:
     resources: 
       - name: test
         resources: 
+          - name: Google_Test_A1F030041D5D6DB0DE46B73135376635.java
+            type: com.ibm.rational.test.lt.generatedCode
           - name: Httptest_Test_A1F03003236BFC40DE46B73135376635.java
             type: com.ibm.rational.test.lt.generatedCode
           - name: UITest_Test_A1F02F1EEE618C20D111B66664356536.java
