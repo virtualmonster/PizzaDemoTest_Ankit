@@ -23,5 +23,43 @@ resources:
     dependencies: 
       - path: /PizzaaDemoTest/UITest.recsession
         type: testRecsession
+      - path: /PizzaaDemoTest/b_Pizza_App_1a3.ma
+        type: test#moeb.applicationPackage
+  - name: UITest_1747143173656.stats
+    type: com.ibm.rational.test.lt.stats.session
+    properties: 
+      startTime: 1747143173656
+      tags: 
+      testId: A1F02F1EEE618C20D111B66664356536
+      testName: UITest
+    dependencies: 
+      - path: /PizzaaDemoTest/UITest.testsuite
+        type: statsSessionTest
+      - path: /PizzaaDemoTest/UITest_1747143173656.xmoebreport
+        type: statsSessionAsset
+      - path: /PizzaaDemoTest/UITest_1747143173656_orch!system.mstats
+        type: statsSessionStore
+      - path: /PizzaaDemoTest/UITest_1747143173656_orch!system.rstats
+        type: statsSessionStore
+      - path: /PizzaaDemoTest/UITest_1747143173656_perf!localhost.mstats
+        type: statsSessionStore
+      - path: /PizzaaDemoTest/UITest_1747143173656_perf!localhost.rstats
+        type: statsSessionStore
+      - path: /PizzaaDemoTest/UITest_1747143174418.executiondlr
+        type: statsSessionAsset
+  - name: UITest_1747143173656.xmoebreport
+  - name: UITest_1747143173656_orch!system.mstats
+  - name: UITest_1747143173656_orch!system.rstats
+    type: com.ibm.rational.test.lt.stats.raw
+  - name: UITest_1747143173656_perf!localhost.mstats
+  - name: UITest_1747143173656_perf!localhost.rstats
+    type: com.ibm.rational.test.lt.stats.raw
+  - name: UITest_1747143174418.executiondlr
+  - name: b_Pizza_App_1a3.ma
+    type: moeb.applicationPackage
   - name: src
     resources: 
+      - name: test
+        resources: 
+          - name: UITest_Test_A1F02F1EEE618C20D111B66664356536.java
+            type: com.ibm.rational.test.lt.generatedCode
